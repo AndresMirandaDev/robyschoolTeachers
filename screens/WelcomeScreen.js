@@ -6,16 +6,12 @@ import LottieView from 'lottie-react-native';
 import AppText from '../components/AppText';
 import colors from '../config/colors';
 import AppButton from '../components/AppButton';
+import GradientBackground from '../components/GradientBackground';
 
 export default function WelcomeScreen() {
   return (
     <View style={styles.container}>
-      <LinearGradient
-        colors={[colors.primary, colors.light]}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 0.5, y: 0.5 }}
-        style={styles.background}
-      />
+      <GradientBackground color1={colors.primary} color2={colors.light} />
       <View style={styles.backgroundCircle}></View>
       <View style={styles.backgroundCircleBottom}></View>
       <View style={styles.animation}>
@@ -46,13 +42,6 @@ const styles = StyleSheet.create({
     height: 200,
     width: 200,
     flex: 1,
-  },
-  background: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
   },
   backgroundCircle: {
     backgroundColor: colors.lightBlue,

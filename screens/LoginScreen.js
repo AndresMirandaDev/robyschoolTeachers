@@ -8,6 +8,7 @@ import colors from '../config/colors';
 import AppForm from '../components/forms/AppForm';
 import AppFormField from '../components/forms/AppFormField';
 import SubmitButton from '../components/forms/SubmitButton';
+import GradientBackground from '../components/GradientBackground';
 // import { useUserContext } from '../userContext/UserContext';
 
 export default function LoginScreen() {
@@ -19,12 +20,7 @@ export default function LoginScreen() {
   };
   return (
     <View style={styles.container}>
-      <LinearGradient
-        colors={[colors.primary, colors.light]}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 0.5, y: 0.5 }}
-        style={styles.background}
-      />
+      <GradientBackground color1={colors.primary} color2={colors.light} />
       <View style={styles.backgroundCircle}></View>
       <View style={styles.backgroundCircleBottom}></View>
       <View style={styles.animation}>
@@ -60,13 +56,7 @@ const styles = StyleSheet.create({
     width: 200,
     flex: 1,
   },
-  background: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-  },
+
   backgroundCircle: {
     backgroundColor: colors.lightBlue,
     height: 400,

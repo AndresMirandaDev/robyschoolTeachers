@@ -8,4 +8,5 @@ export default {
   yellow: '#e6e454',
   medium: '#6e6969',
   dark: '#0c0c0c',
+  green: '#4adea9',
 };

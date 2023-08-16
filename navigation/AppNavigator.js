@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import colors from '../config/colors';
 import HomeNavigator from './HomeNavigator';
+import ClassBookNavigator from './ClassBookNavigator';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -20,6 +21,20 @@ function AppNavigator() {
           tabBarIcon: ({ focused, color }) => (
             <MaterialCommunityIcons
               name="home"
+              size={20}
+              color={focused ? color : colors.light}
+            />
+          ),
+          tabBarColor: colors.danger,
+        }}
+      />
+      <Tab.Screen
+        name="Libro De Clases"
+        component={ClassBookNavigator}
+        options={{
+          tabBarIcon: ({ focused, color }) => (
+            <MaterialCommunityIcons
+              name="book-open"
               size={20}
               color={focused ? color : colors.light}
             />
